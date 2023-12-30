@@ -49,30 +49,37 @@
 
 ;; color theme
 (use-package distinguished-theme
-             :ensure t
-             :init
-             (load-theme 'distinguished t))
+  :ensure t
+  :init
+  (load-theme 'distinguished t))
 
 ;; move-text
 (use-package move-text
-             :config
-             (global-set-key (kbd "M-p") 'move-text-up)
-             (global-set-key (kbd "M-n") 'move-text-down))
+  :config
+  (global-set-key (kbd "M-p") 'move-text-up)
+  (global-set-key (kbd "M-n") 'move-text-down))
 
 ;; smex
 (use-package smex
-             :config
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
+  :config
+  (global-set-key (kbd "M-x") 'smex)
+  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
 
 ;; paredit
 (use-package paredit
-             :config
-             (defun turn-on-paredit ()
-               (interactive)
-               (paredit-mode 1))
-             (add-hook 'emacs-lisp-mode-hook  'rc/turn-on-paredit)
-             (add-hook 'lisp-mode-hook        'rc/turn-on-paredit)
-             (add-hook 'common-lisp-mode-hook 'rc/turn-on-paredit)
-             (add-hook 'scheme-mode-hook      'rc/turn-on-paredit))
+  :config
+  (defun turn-on-paredit ()
+    (interactive)
+    (paredit-mode 1))
+  (add-hook 'emacs-lisp-mode-hook  'turn-on-paredit)
+  (add-hook 'lisp-mode-hook        'turn-on-paredit)
+  (add-hook 'common-lisp-mode-hook 'turn-on-paredit)
+  (add-hook 'scheme-mode-hook      'turn-on-paredit))
+
+;; indent-guide
+(use-package indent-guide
+  :config
+  (setq indent-guide-char "|")
+  (indent -guide-global-mode))
+
