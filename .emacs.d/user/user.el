@@ -81,5 +81,5 @@
 (use-package indent-guide
   :config
   (setq indent-guide-char "|")
-  (indent -guide-global-mode))
+  (indent-guide-global-mode))
 
