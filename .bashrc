@@ -113,11 +113,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Set Vi mode #
+set -o vi
+
 # Nvidia #
 alias nvrun="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 
-# Emacs #
-alias em="emacsclient -nw"
+# Neovim #
+alias nv="nvim"
+
+## Emacs #
+#alias em="emacsclient -nw"
 
 # sudo #
 alias sudo='sudo '
