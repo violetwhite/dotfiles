@@ -75,5 +75,13 @@ require("lazy").setup({
 		main = "ibl",
 		opts = {},
 	},
+    
+    {
+        "lfenzo/fusion.nvim",
+        branch = "main",
+        config = function()
+            vim.cmd[[colorscheme fusion]]
+        end
+    },
 
 })

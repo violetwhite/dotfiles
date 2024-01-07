@@ -21,4 +21,3 @@ opt.splitbelow = true
 opt.swapfile = false
 opt.guicursor = ""
 opt.showmode = false
-vim.cmd("colorscheme lunaperche")
